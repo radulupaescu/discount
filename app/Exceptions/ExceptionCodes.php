@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Exception;
+
+/**
+ * Class ExceptionCodes
+ * @package App\Exception
+ */
+class ExceptionCodes
+{
+    /* GENERAL EXCEPTION CODES */
+    const UNKNOWN_EXCEPTION_CODE = 'UNKNOWN_EXCEPTION_CODE';
+
+    /* CUSTOMER */
+    const INVALID_CUSTOMER_ID         = 'INVALID_CUSTOMER_ID';
+    const INVALID_REPOSITORY_RESPONSE = 'INVALID_REPOSITORY_RESPONSE';
+
+    /* PRODUCT */
+    const INVALID_PRODUCT_ID       = 'INVALID_PRODUCT_ID';
+    const INVALID_PRODUCT_CATEGORY = 'INVALID_PRODUCT_CATEGORY';
+
+    /* ORDER */
+    const MISSING_ORDER_FIELDS   = 'MISSING_ORDER_FIELDS';
+    const INCORRECT_ORDER_FIELDS = 'INCORRECT_ORDER_FIELDS';
+}
