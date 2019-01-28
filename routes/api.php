@@ -14,6 +14,8 @@
 $api->group([
     'prefix'     => 'api',
     'middleware' => [
+        \App\Middleware\CallerAuthorizationMiddleware::class,
+        \App\Middleware\SanitizationMiddleware::class,
         \App\Middleware\ParseOrderMiddleware::class
     ]
 ], function () use ($api) {
