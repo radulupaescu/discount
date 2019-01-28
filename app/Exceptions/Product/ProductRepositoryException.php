@@ -5,6 +5,10 @@ namespace App\Exceptions\Product;
 use App\Exception\ExceptionCodes;
 use App\Exceptions\BaseDiscountServiceException;
 
+/**
+ * Class ProductRepositoryException
+ * @package App\Exceptions\Product
+ */
 class ProductRepositoryException extends BaseDiscountServiceException
 {
     public static function invalidProductId($id, $previous)

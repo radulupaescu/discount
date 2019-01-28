@@ -4,6 +4,10 @@ namespace App\Services;
 
 use App\Contracts\ApplicationRepository;
 
+/**
+ * Class AbstractDatasourceService
+ * @package App\Services
+ */
 abstract class AbstractDatasourceService
 {
     /** @var ApplicationRepository $repository */

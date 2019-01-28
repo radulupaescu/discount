@@ -5,6 +5,10 @@ namespace App\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
+/**
+ * Class SanitizationMiddleware
+ * @package App\Middleware
+ */
 class SanitizationMiddleware
 {
     /**

@@ -6,6 +6,10 @@ use App\Contracts\Discount;
 use App\Models\Order\OrderDiscountModel;
 use App\Models\Order\OrderModel;
 
+/**
+ * Class AbstractDiscount
+ * @package App\Models\Discounts
+ */
 abstract class AbstractDiscount implements Discount
 {
     /** @var OrderModel $order */

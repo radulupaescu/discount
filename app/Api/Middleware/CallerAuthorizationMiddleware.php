@@ -5,6 +5,10 @@ namespace App\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
+/**
+ * Class CallerAuthorizationMiddleware
+ * @package App\Middleware
+ */
 class CallerAuthorizationMiddleware
 {
     /**

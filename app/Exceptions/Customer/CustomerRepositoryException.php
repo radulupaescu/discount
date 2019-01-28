@@ -5,6 +5,10 @@ namespace App\Exceptions\Customer;
 use App\Exception\ExceptionCodes;
 use App\Exceptions\BaseDiscountServiceException;
 
+/**
+ * Class CustomerRepositoryException
+ * @package App\Exceptions\Customer
+ */
 class CustomerRepositoryException extends BaseDiscountServiceException
 {
     public static function invalidCustomerId($id)

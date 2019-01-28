@@ -5,6 +5,10 @@ namespace App\Contracts\Repositories;
 use App\Exceptions\Customer\CustomerRepositoryException;
 use App\Models\External\CustomerModel;
 
+/**
+ * Interface CustomerRepository
+ * @package App\Contracts\Repositories
+ */
 interface CustomerRepository
 {
     /**

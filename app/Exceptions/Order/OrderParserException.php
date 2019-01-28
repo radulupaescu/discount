@@ -5,6 +5,10 @@ namespace App\Exceptions\Order;
 use App\Exception\ExceptionCodes;
 use App\Exceptions\BaseDiscountServiceException;
 
+/**
+ * Class OrderParserException
+ * @package App\Exceptions\Order
+ */
 class OrderParserException extends BaseDiscountServiceException
 {
     /**
