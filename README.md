@@ -154,3 +154,16 @@ Example response for the above order given:
   "discounted-total":44.91
 }
 ```
+
+## What's next?
+
+Not necessarily in this order, but the following issues should be attended:
+
+- repository abstraction so it could be configured in the .env file
+- more clear docblocks (to be able to use a documentation generator tool)
+- docblocks for tests with short description of what is being tested
+- test the exceptions (or to be more precise, test that the correct exceptions are thrown and caught)
+- implement default header authorization mechanism
+- implement default sanitization
+- richer exception reporting to the callers
+- some exceptions can be just logged not necessarily reported (for example wrong totals on order could trigger recalculation and logging of bad input data)
