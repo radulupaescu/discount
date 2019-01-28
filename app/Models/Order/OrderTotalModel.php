@@ -30,7 +30,7 @@ class OrderTotalModel
      *
      * @return OrderTotalModel
      */
-    public function setOriginalValue(float $originalValue)
+    public function setOriginalValue($originalValue)
     {
         $this->originalValue = $originalValue;
 
@@ -50,7 +50,7 @@ class OrderTotalModel
      *
      * @return OrderTotalModel
      */
-    public function setDiscount(float $discount)
+    public function setDiscount($discount)
     {
         $this->discount = $discount;
 
@@ -70,7 +70,7 @@ class OrderTotalModel
      *
      * @return OrderTotalModel
      */
-    public function setDiscountedValue(float $discountedValue)
+    public function setDiscountedValue($discountedValue)
     {
         $this->discountedValue = $discountedValue;
 

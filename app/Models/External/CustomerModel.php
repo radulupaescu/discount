@@ -33,7 +33,7 @@ class CustomerModel
      *
      * @return CustomerModel
      */
-    public function setId(int $id)
+    public function setId($id)
     {
         $this->id = $id;
 
@@ -53,7 +53,7 @@ class CustomerModel
      *
      * @return CustomerModel
      */
-    public function setName(string $name)
+    public function setName($name)
     {
         $this->name = $name;
 
@@ -93,7 +93,7 @@ class CustomerModel
      *
      * @return CustomerModel
      */
-    public function setRevenue(float $revenue)
+    public function setRevenue($revenue)
     {
         $this->revenue = $revenue;
 

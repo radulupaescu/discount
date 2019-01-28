@@ -11,7 +11,7 @@ use App\Models\External\CustomerModel;
  */
 class OrderModel
 {
-    /** @var int $id */
+    /** @var integer $id */
     private $id;
 
     /** @var CustomerModel $customer */
@@ -27,7 +27,7 @@ class OrderModel
     private $total;
 
     /**
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -35,11 +35,11 @@ class OrderModel
     }
 
     /**
-     * @param int $id
+     * @param integer $id
      *
      * @return OrderModel
      */
-    public function setId(int $id)
+    public function setId($id)
     {
         $this->id = $id;
 
@@ -79,7 +79,7 @@ class OrderModel
      *
      * @return OrderModel
      */
-    public function setItems(array $items)
+    public function setItems($items)
     {
         $this->items = $items;
 
@@ -125,7 +125,7 @@ class OrderModel
      *
      * @return OrderModel
      */
-    public function setDiscountItems(array $discountItems)
+    public function setDiscountItems($discountItems)
     {
         $this->discountItems = $discountItems;
 

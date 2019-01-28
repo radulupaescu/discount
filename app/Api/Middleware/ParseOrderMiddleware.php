@@ -57,6 +57,8 @@ class ParseOrderMiddleware
                 'message' => $ope->getMessage()
             ], 200);
         } catch (\Exception $e) {
+            var_dump($e->getMessage());
+            exit();
             return response()->json([
                 'code'    => ExceptionCodes::UNKNOWN_EXCEPTION_CODE,
                 'message' => 'Service has raised an error'
@@ -74,7 +76,7 @@ class ParseOrderMiddleware
      * @return OrderModel
      * @throws OrderParserException
      */
-    private function mapData(array $orderData)
+    private function mapData($orderData)
     {
 
         $orderTotal = new OrderTotalModel;
@@ -101,7 +103,7 @@ class ParseOrderMiddleware
      * @return OrderProductModel
      * @throws OrderParserException
      */
-    private function parseItem(array $orderItemData)
+    private function parseItem($orderItemData)
     {
         $this->validateItemData($orderItemData);
         $product = $this->fetchItemProduct($orderItemData);
@@ -129,7 +131,7 @@ class ParseOrderMiddleware
      * @return \App\Models\External\ProductModel
      * @throws OrderParserException
      */
-    private function fetchItemProduct(array $orderItemData)
+    private function fetchItemProduct($orderItemData)
     {
         try {
             $product = $this->productService->getProductById($orderItemData['product-id']);
@@ -146,7 +148,7 @@ class ParseOrderMiddleware
      * @return \App\Models\External\CustomerModel
      * @throws OrderParserException
      */
-    private function fetchCustomer(int $customerId)
+    private function fetchCustomer($customerId)
     {
         try {
             $product = $this->customerService->getCustomerById($customerId);
@@ -163,7 +165,7 @@ class ParseOrderMiddleware
      * @return bool
      * @throws OrderParserException
      */
-    private function validateItemData(array $orderItemData)
+    private function validateItemData($orderItemData)
     {
         if (!isset($orderItemData['product-id'])) {
             throw OrderParserException::missingInformation('product-id');
@@ -182,7 +184,7 @@ class ParseOrderMiddleware
      * @return bool
      * @throws OrderParserException
      */
-    private function validateRawData(array $orderData)
+    private function validateRawData($orderData)
     {
         if (!isset($orderData['id'])) {
             throw OrderParserException::missingInformation('id');

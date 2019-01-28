@@ -66,7 +66,7 @@ class DiscountControllerTest extends \TestCase
             ->with($order)
             ->andReturn($order);
 
-        $response = $this->controller->discount($order);
+        $response = $this->controller->apply($order);
 
         self::assertEquals($expectedResponse, $response->content());
     }

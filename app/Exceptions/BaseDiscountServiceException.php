@@ -2,8 +2,6 @@
 
 namespace App\Exceptions;
 
-use Throwable;
-
 /**
  * Class BaseDiscountServiceException
  * @package App\Exceptions
@@ -18,9 +16,9 @@ class BaseDiscountServiceException extends \Exception
      *
      * @param string         $message
      * @param string         $code
-     * @param Throwable|null $previous
+     * @param \Throwable|null $previous
      */
-    public function __construct(string $message = '', string $code, Throwable $previous = null)
+    public function __construct($message = '', $code, $previous = null)
     {
         $this->customCode = $code;
 

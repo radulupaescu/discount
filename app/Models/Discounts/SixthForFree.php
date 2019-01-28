@@ -60,7 +60,7 @@ class SixthForFree extends AbstractDiscount
     {
         $returnableItems = [];
 
-        $discountedItemsCount = $item->getQuantity() / 6;
+        $discountedItemsCount = floor($item->getQuantity() / 6);
 
         if ($item->getQuantity() % 6 == 5) {
             $freeItem = new OrderProductModel;

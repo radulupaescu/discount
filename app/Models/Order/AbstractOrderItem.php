@@ -32,7 +32,7 @@ abstract class AbstractOrderItem implements OrderItem
      *
      * @return AbstractOrderItem
      */
-    public function setQuantity(int $quantity)
+    public function setQuantity($quantity)
     {
         $this->quantity = $quantity;
 
@@ -52,7 +52,7 @@ abstract class AbstractOrderItem implements OrderItem
      *
      * @return AbstractOrderItem
      */
-    public function setUnitPrice(float $unitPrice)
+    public function setUnitPrice($unitPrice)
     {
         $this->unitPrice = $unitPrice;
 
@@ -72,7 +72,7 @@ abstract class AbstractOrderItem implements OrderItem
      *
      * @return AbstractOrderItem
      */
-    public function setTotal(float $total)
+    public function setTotal($total)
     {
         $this->total = $total;
 

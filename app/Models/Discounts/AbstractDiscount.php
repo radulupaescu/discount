@@ -37,7 +37,7 @@ abstract class AbstractDiscount implements Discount
      *
      * @return OrderDiscountModel
      */
-    protected function buildDiscountItem(float $price, int $quantity)
+    protected function buildDiscountItem($price, $quantity)
     {
         $discount = new OrderDiscountModel;
 

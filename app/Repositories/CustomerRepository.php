@@ -42,7 +42,7 @@ class CustomerRepository extends AbstractRepository implements CustomerRepositor
     /**
      * @param array $customers
      */
-    public function setCustomers(array $customers)
+    public function setCustomers($customers)
     {
         $this->customers = $customers;
     }

@@ -33,7 +33,7 @@ class ProductModel
      *
      * @return ProductModel
      */
-    public function setId(string $id)
+    public function setId($id)
     {
         $this->id = $id;
 
@@ -53,7 +53,7 @@ class ProductModel
      *
      * @return ProductModel
      */
-    public function setDescription(string $description)
+    public function setDescription($description)
     {
         $this->description = $description;
 
@@ -73,7 +73,7 @@ class ProductModel
      *
      * @return ProductModel
      */
-    public function setCategory(int $category)
+    public function setCategory($category)
     {
         $this->category = $category;
 
@@ -93,7 +93,7 @@ class ProductModel
      *
      * @return ProductModel
      */
-    public function setPrice(float $price)
+    public function setPrice($price)
     {
         $this->price = $price;
 

@@ -18,7 +18,7 @@ interface OrderItem
      *
      * @return OrderItem
      */
-    public function setQuantity(int $quantity);
+    public function setQuantity($quantity);
 
     /**
      * @return float
@@ -30,7 +30,7 @@ interface OrderItem
      *
      * @return OrderItem
      */
-    public function setUnitPrice(float $unitPrice);
+    public function setUnitPrice($unitPrice);
 
     /**
      * @return float
@@ -42,7 +42,7 @@ interface OrderItem
      *
      * @return OrderItem
      */
-    public function setTotal(float $total);
+    public function setTotal($total);
 
     /**
      * @return OrderItem

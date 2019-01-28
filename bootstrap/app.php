@@ -68,7 +68,8 @@ $app->register(\App\Providers\DiscountServiceProvider::class);
 |
 */
 
-$app->router->group([
+// $app->router->group([
+$app->group([
     'namespace' => 'App\Api\Controllers',
 ], function ($api) {
     require __DIR__ . '/../routes/api.php';

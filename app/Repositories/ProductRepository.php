@@ -44,7 +44,7 @@ class ProductRepository extends AbstractRepository implements ProductRepositoryC
     /**
      * @param array $products
      */
-    public function setProducts(array $products)
+    public function setProducts($products)
     {
         $this->products = $products;
     }

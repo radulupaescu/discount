@@ -27,7 +27,7 @@ class OrderDiscountModel extends AbstractOrderItem
      *
      * @return OrderDiscountModel
      */
-    public function setName(string $name)
+    public function setName($name)
     {
         $this->name = $name;
 
@@ -47,7 +47,7 @@ class OrderDiscountModel extends AbstractOrderItem
      *
      * @return OrderDiscountModel
      */
-    public function setCode(string $code)
+    public function setCode($code)
     {
         $this->code = $code;
 
@@ -59,7 +59,7 @@ class OrderDiscountModel extends AbstractOrderItem
      *
      * @return AbstractOrderItem
      */
-    public function setUnitPrice(float $price)
+    public function setUnitPrice($price)
     {
         return parent::setUnitPrice(-1 * $price);
     }

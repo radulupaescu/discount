@@ -16,7 +16,7 @@ class OrderParserException extends BaseDiscountServiceException
      *
      * @return OrderParserException
      */
-    public static function missingInformation(string $field)
+    public static function missingInformation($field)
     {
         return new self('Incomplete order data. Field ' . $field . ' is missing.' , ExceptionCodes::MISSING_ORDER_FIELDS);
     }
@@ -27,7 +27,7 @@ class OrderParserException extends BaseDiscountServiceException
      *
      * @return OrderParserException
      */
-    public static function orderProductNotFound(string $productId, \Throwable $previous)
+    public static function orderProductNotFound($productId, $previous)
     {
         return new self('Invalid product-id found while parsing order: ' . $productId , ExceptionCodes::INVALID_PRODUCT_ID, $previous);
     }
@@ -38,7 +38,7 @@ class OrderParserException extends BaseDiscountServiceException
      *
      * @return OrderParserException
      */
-    public static function orderCustomerNotFound(string $productId, \Throwable $previous)
+    public static function orderCustomerNotFound($productId, $previous)
     {
         return new self('Invalid customer-id found while parsing order: ' . $productId , ExceptionCodes::INVALID_CUSTOMER_ID, $previous);
     }
