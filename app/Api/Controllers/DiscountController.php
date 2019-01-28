@@ -2,6 +2,7 @@
 
 namespace App\Api\Controllers;
 
+use App\Models\Order\OrderDiscountModel;
 use App\Models\Order\OrderModel;
 use App\Services\DiscountService;
 
@@ -29,10 +30,28 @@ class DiscountController extends BaseController
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function discount(OrderModel $order)
+    public function apply(OrderModel $order)
     {
         $discountedOrder = $this->discountService->applyDiscounts($order);
 
         return response()->json($discountedOrder->toArray(), 200);
+    }
+
+    /**
+     * @param OrderModel $order
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getDiscountItems(OrderModel $order)
+    {
+        /** @var OrderDiscountModel[] $discountItems */
+        $discountItems = $this->discountService->getOrderDiscountItems($order);
+        $response = [];
+
+        foreach ($discountItems as $discountItem) {
+            $response[] = $discountItem->toArray();
+        }
+
+        return response()->json($response, 200);
     }
 }

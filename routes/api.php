@@ -17,5 +17,6 @@ $api->group([
         \App\Middleware\ParseOrderMiddleware::class
     ]
 ], function () use ($api) {
-    $api->post('discount', 'DiscountController@discount');
+    $api->post('discounts/apply', 'DiscountController@apply');
+    $api->post('discounts/get', 'DiscountController@getDiscountItems');
 });
