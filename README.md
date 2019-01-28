@@ -11,7 +11,7 @@ It has two routes:
 After cloning this this repository you must run composer to fetch all dependencies.
 
 The microservice will be available at:
-[your-installation-path]/index.php?[api-route]
+[your-installation-path]/public/index.php?[api-route]
 
 URL rewriting is not provided as this is dependent on the container/web server configuration, but should be trivial.
 
