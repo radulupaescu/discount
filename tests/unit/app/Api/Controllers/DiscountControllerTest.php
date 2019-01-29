@@ -4,6 +4,7 @@ namespace tests\unit\app\Api\Controllers;
 
 use App\Api\Controllers\DiscountController;
 use App\Models\External\CustomerModel;
+use App\Models\Order\OrderDiscountModel;
 use App\Models\Order\OrderModel;
 use App\Models\Order\OrderTotalModel;
 use App\Services\DiscountService;
@@ -24,9 +25,9 @@ class DiscountControllerTest extends \TestCase
         $this->controller = new DiscountController($this->discountService);
     }
 
-    public function testCallingDiscountWithValidOrderReturnsDiscounts()
+    public function testCallingApplyWithValidOrderReturnsDiscounts()
     {
-        $order = new OrderModel();
+        $order = new OrderModel;
         $order->setId(1);
 
         /** @var CustomerModel|Mock $customer */
@@ -71,4 +72,28 @@ class DiscountControllerTest extends \TestCase
         self::assertEquals($expectedResponse, $response->content());
     }
 
+    public function testCallingGetDiscountItemsWithValidOrderReturnsDiscounts()
+    {
+        $discountItemArray = ['name' => 'value'];
+
+        /** @var OrderDiscountModel|Mock $discountItem */
+        $discountItem = \Mockery::mock(OrderDiscountModel::class)->makePartial();
+        $discountItem->shouldReceive('toArray')
+            ->once()
+            ->withNoArgs()
+            ->andReturn($discountItemArray);
+
+        $order = new OrderModel;
+
+        $this->discountService->shouldReceive('getOrderDiscountItems')
+            ->once()
+            ->with($order)
+            ->andReturn([$discountItem]);
+
+        $expectedResponse = json_encode([['name' => 'value']]);
+
+        $response = $this->controller->getDiscountItems($order);
+
+        self::assertEquals($expectedResponse, $response->content());
+    }
 }

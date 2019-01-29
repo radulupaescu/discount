@@ -15,9 +15,4 @@ class ProductRepositoryException extends BaseDiscountServiceException
     {
         return new self('Invalid product id, for id: ' . $id, ExceptionCodes::INVALID_PRODUCT_ID, $previous);
     }
-
-    public static function invalidProductCategory($category)
-    {
-        return new self('Invalid product category, for category id: ' . $category, ExceptionCodes::INVALID_PRODUCT_CATEGORY);
-    }
 }

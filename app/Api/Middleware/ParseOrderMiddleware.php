@@ -57,8 +57,6 @@ class ParseOrderMiddleware
                 'message' => $ope->getMessage()
             ], 200);
         } catch (\Exception $e) {
-            var_dump($e->getMessage());
-            exit();
             return response()->json([
                 'code'    => ExceptionCodes::UNKNOWN_EXCEPTION_CODE,
                 'message' => 'Service has raised an error'
@@ -153,7 +151,7 @@ class ParseOrderMiddleware
         try {
             $product = $this->customerService->getCustomerById($customerId);
         } catch (CustomerRepositoryException $cre) {
-            throw OrderParserException::orderProductNotFound($customerId, $cre);
+            throw OrderParserException::orderCustomerNotFound($customerId, $cre);
         }
 
         return $product;
