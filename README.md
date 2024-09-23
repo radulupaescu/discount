@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/radulupaescu/discount.svg?branch=master)](https://travis-ci.org/radulupaescu/discount) [![codecov](https://codecov.io/gh/radulupaescu/discount/branch/master/graph/badge.svg)](https://codecov.io/gh/radulupaescu/discount)
+## This repository was a take-away test a few years ago.
 
 # Discount microservice based on lumen
 
